@@ -1,0 +1,51 @@
+/* Utility Classes */
+.container {
+  max-width: 1280px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: auto;
+}
+
+.heading_h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-align: center;
+}
+
+.btn_primary {
+  background-color: var(--color-theme);
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: .8em 2em;
+  border: 3px solid var(--color-theme);
+  border-radius: 2em;
+  transition: 300ms color, 300ms background-color;
+}
+
+.btn_primary:hover {
+  background-color: #fff;
+  color: var(--color-theme);
+}
+
+.paragraph {
+  max-width: 60ch;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+  line-height: 2;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .btn_primary {
+    font-size: 1rem;
+  }
+}

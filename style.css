@@ -1,0 +1,264 @@
+:root {
+  --font-family: 'Open Sans', sans-serif;
+  --color-theme: rgb(233, 4, 92);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* NAV Section */
+.nav_section {
+  background-color: #fff;
+  position: fixed;
+  overflow-y: auto;
+  padding: 1rem;
+  box-shadow: 0px 22px 70px 4px rgba(0, 0, 0, 0.56);
+  z-index: 100;
+  max-width: 100%;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  transition: 300ms all;
+}
+
+.nav__ham {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  color: var(--color-theme);
+  background-color: transparent;
+  border: none;
+  padding: .5em 1em;
+  transition: 300ms transform;
+  cursor: pointer;
+  z-index: 200;
+}
+
+ul.nav__items_list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 6rem;
+}
+
+.nav__link {
+  font-size: 1.5rem;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5em 2em .5em 1em;
+  color: var(--color-theme);
+  transition: 300ms all;
+}
+
+.nav__link:hover {
+  background-color: var(--color-theme);
+  color: #fff;
+  padding: .5em 1.5em .5em 1.5em;
+}
+
+/* HERO Section */
+.hero_section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.hero__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2.5rem;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero__details {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__name {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.3em;
+  margin-bottom: .25em;
+}
+
+.hero__skills {
+  color: #bbb;
+  font-size: 1.8rem;
+  letter-spacing: .2rem;
+  word-spacing: .4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.hero__btn:hover {
+  background-color: #000;
+}
+
+/* ABOUT ME Section */
+.about-me__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.about-me__btn {
+  margin-top: 4rem;
+}
+
+/* SKILLS Section */
+.skills__container {
+  position: relative;
+  padding-bottom: 10rem;
+  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.skills__container::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: var(--color-theme);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skills__heading {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+  color: #777;
+  font-size: 1.2rem;
+}
+
+/* MY WORKS Section */
+.my-works__container {
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+.my-works__container::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: var(--color-theme);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.my-works__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.my-works__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* GET IN TOUCH Section */
+.get-in-touch__container {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+ul.get-in-touch__social_icons {
+  display: flex;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.get-in-touch__social_link {
+  color: var(--color-theme);
+  cursor: pointer;
+}
+
+
+/* FOOTER Section */
+.footer_section {
+  background-color: #000;
+}
+
+.footer__container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills__div:last-child {
+    grid-column-end: span 2;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .skills__container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__div:last-child {
+    grid-column-end: span 1;
+  }
+
+  .my-works__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .hero__name {
+    font-size: 3rem;
+  }
+
+  .hero__skills {
+    font-size: 1.2rem;
+  }
+
+  ul.get-in-touch__social_icons {
+    gap: 2rem;
+  }
+}
